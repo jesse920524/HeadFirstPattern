@@ -5,12 +5,14 @@ import java.util.Iterator;
 
 /**
  * Created by Jesse Fu on 2019-04-06.
+ *
+ * 内部使用Enumeration类实现的Iterator。（适配器模式）
  */
-public class EnumerationAdapter implements Iterator{
+public class Enumerationiterator implements Iterator{
 
     private Enumeration enumeration;
 
-    public EnumerationAdapter(Enumeration enumeration){
+    public Enumerationiterator(Enumeration enumeration){
         this.enumeration = enumeration;
     }
 
