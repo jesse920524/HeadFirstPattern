@@ -1,5 +1,7 @@
 package strategy;
 
+import adapter.duckAdapter.IDuck;
+import strategy.duck.Duck;
 import strategy.duck.MallardDuck;
 import strategy.duck.ModelDuck;
 import strategy.duck.WoodDuck;
@@ -17,13 +19,13 @@ public class TestStrategyPattern {
         FlyBehavior flyBehavior1 = new FlyWithWings();
         QuackBehavior quackBehavior1 = new Quack();
 
-        MallardDuck mallardDuck = new MallardDuck(flyBehavior1, quackBehavior1);
+        Duck mallardDuck = new MallardDuck(flyBehavior1, quackBehavior1);
 
         //init a wood duck
         FlyBehavior flyBehavior2 = new FlyNoWay();
         QuackBehavior quackBehavior2 = new MuteQuack();
 
-        WoodDuck woodDuck = new WoodDuck(flyBehavior2, quackBehavior2);
+        Duck woodDuck = new WoodDuck(flyBehavior2, quackBehavior2);
 
         ModelDuck modelDuck = new ModelDuck();
         modelDuck.setFlyBehavior(flyBehavior1);
